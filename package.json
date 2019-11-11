@@ -12,9 +12,11 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "start:watch": "nodemon",
+    "build": "tsc -p .",
     "test": "jest",
-    "watch-tests": "jest --watch",
-    "build": "tsc -p ."
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"
   },
   "dependencies": {
     "@kubernetes/client-node": "0.11.0",
